@@ -1,0 +1,24 @@
+.h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0 20px;
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(#7117ea, #ea6060);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 1rem;
+  margin-top: 50px;
+}
+
+.h2 {
+  justify-content: space-between;
+  align-items: left;
+  padding: 0 20px;
+  font-size: 80px;
+  font-weight: 700;
+  color: black;
+  margin-left: 1rem;
+}

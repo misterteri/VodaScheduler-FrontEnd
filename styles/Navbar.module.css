@@ -1,0 +1,14 @@
+.a {
+  padding: 0rem 2rem;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5rem;
+  background: #000;
+  color: #fff;
+  font-weight: 200;
+}

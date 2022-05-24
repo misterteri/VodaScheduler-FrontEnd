@@ -29,6 +29,7 @@ const Square: NextPage = () => {
       .then((res) => console.log("Success:", res))
       .catch((err) => console.error("Error:", err));
   };
+
   return (
     <div className={styles.square}>
       <Header />
@@ -43,22 +44,33 @@ const Square: NextPage = () => {
       >
         <label className={uploadStyles.uploadbutton}>
           <Image height={25} width={25} src={img} />
+
           <span
             style={{
-              marginLeft: `0.5rem`,
+              padding: `auto`,
               marginTop: `auto`,
               marginBottom: `auto`,
             }}
           >
             Upload File
           </span>
+          {/* THE BUTTON INPUT */}
           <input type="file" name="file" hidden onChange={changeHandler} />
         </label>
+
         <button
           className={uploadStyles.submitbutton}
           onClick={handleSubmission}
         >
-          Submit
+          <span
+            style={{
+              padding: `auto`,
+              marginTop: `auto`,
+              marginBottom: `auto`,
+            }}
+          >
+            Submit
+          </span>
         </button>
       </div>
     </div>

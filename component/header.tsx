@@ -8,8 +8,9 @@ export default function Header() {
     <nav>
       <ul className={styles.ul}>
         <li>
-          <Image src={logo} width="75" height="75" />
+          <Image src={logo} max-width="75" max-height="75" />
         </li>
+
         <li
           style={{
             marginLeft: `auto`,
@@ -22,6 +23,7 @@ export default function Header() {
             <a>About</a>
           </Link>
         </li>
+
         <li
           style={{
             marginLeft: `2.5rem`,
@@ -34,6 +36,7 @@ export default function Header() {
             <a>Progress</a>
           </Link>
         </li>
+
         <li
           style={{
             marginLeft: `2.5rem`,

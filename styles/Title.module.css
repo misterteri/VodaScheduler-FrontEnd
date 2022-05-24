@@ -10,7 +10,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 1rem;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
 .h2 {
@@ -26,8 +26,12 @@
 @media screen and (max-width: 600px) {
   .h1 {
     font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .h2 {
     font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }

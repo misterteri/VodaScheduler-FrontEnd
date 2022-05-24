@@ -1,3 +1,4 @@
+import React from "react";
 import type { NextPage } from "next";
 import styles from "../styles/Header.module.css";
 import Image from "next/image";

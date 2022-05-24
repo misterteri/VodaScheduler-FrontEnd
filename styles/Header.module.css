@@ -1,24 +1,12 @@
-.h1 {
+.ul {
   display: flex;
-  justify-content: space-between;
-  align-items: left;
-  padding: 0 20px;
-  font-size: 80px;
-  font-weight: 700;
-  background: linear-gradient(#7117ea, #ea6060);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: 1rem;
-  margin-top: 50px;
+  flex: 1;
+  list-style-type: none;
 }
 
-.h2 {
-  justify-content: space-between;
-  align-items: left;
-  padding: 0 20px;
-  font-size: 80px;
-  font-weight: 700;
-  color: black;
-  margin-left: 1rem;
+@media screen and (max-width: 600px) {
+  .ul > li {
+    font-size: 10px;
+    font-weight: bold;
+  }
 }

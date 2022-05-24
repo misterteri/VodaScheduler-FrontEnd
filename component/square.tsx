@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
 import Header from "./header";
-import Navbar from "./navbar";
 import styles from "../styles/Square.module.css";
 import uploadStyles from "../styles/UploadButton.module.css";
 import img from "../asset/file_img.svg";
 import Image from "next/image";
+import Title from "./title";
 
 const Square: NextPage = () => {
   const [selectedFile, setSelectedFile] = useState<File | string>("");
@@ -30,33 +30,37 @@ const Square: NextPage = () => {
       .catch((err) => console.error("Error:", err));
   };
   return (
-    <div style={{ display: "flex" }}>
-      <span className={styles.square}>
-        <Header />
-        <Navbar />
-      </span>
-      <span style={{ marginTop: `auto`, marginBottom: `auto` }}>
-        <div
-          style={{
-            right: "50px",
-            width: "300px",
-            position: "absolute",
-            padding: "5px",
-          }}
-        >
-          <label className={uploadStyles.uploadbutton}>
-            <Image src={img} layout="fixed" width="50" height="50" />
-            Upload File
-            <input type="file" name="file" hidden onChange={changeHandler} />
-          </label>
-          <button
-            className={uploadStyles.submitbutton}
-            onClick={handleSubmission}
+    <div className={styles.square}>
+      <Header />
+      <Title />
+      <div
+        style={{
+          marginLeft: `2rem`,
+          margin: `2rem`,
+          width: "300px",
+          padding: "5px",
+        }}
+      >
+        <label className={uploadStyles.uploadbutton}>
+          <Image height={25} width={25} src={img} />
+          <span
+            style={{
+              marginLeft: `0.5rem`,
+              marginTop: `auto`,
+              marginBottom: `auto`,
+            }}
           >
-            Submit
-          </button>
-        </div>
-      </span>
+            Upload File
+          </span>
+          <input type="file" name="file" hidden onChange={changeHandler} />
+        </label>
+        <button
+          className={uploadStyles.submitbutton}
+          onClick={handleSubmission}
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
 };

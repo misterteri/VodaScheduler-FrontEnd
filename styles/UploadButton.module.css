@@ -21,3 +21,21 @@
   font-weight: 600;
   margin: 4px 2px;
 }
+
+/* .logo {
+  width: 1px;
+  height: 1px;
+} */
+
+@media screen and (max-width: 600px) {
+  .submitbutton {
+    width: 40%;
+    padding: 0.5rem;
+    font-size: 13px;
+  }
+  .uploadbutton {
+    width: 75%;
+    display: block;
+    font-size: 15px;
+  }
+}

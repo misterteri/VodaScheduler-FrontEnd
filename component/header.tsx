@@ -1,21 +1,53 @@
-import React from "react";
-import type { NextPage } from "next";
-import styles from "../styles/Header.module.css";
+import Link from "next/link";
 import Image from "next/image";
 import logo from "../asset/Logo.svg";
+import styles from "../styles/Header.module.css";
 
-const Header: NextPage = () => {
+export default function Header() {
   return (
-    <>
-      <div style={{ marginLeft: `2rem` }}>
-        <Image src={logo} layout="fixed" width="100" height="100" />
-      </div>
-      <div className={styles.h1}>Voda</div>
-      <div className={styles.h2}>
-        Scheduler<span>.</span>
-      </div>
-    </>
+    <nav>
+      <ul className={styles.ul}>
+        <li>
+          <Image src={logo} width="75" height="75" />
+        </li>
+        <li
+          style={{
+            marginLeft: `auto`,
+            fontWeight: `bold`,
+            marginTop: `auto`,
+            marginBottom: `auto`,
+          }}
+        >
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li
+          style={{
+            marginLeft: `2.5rem`,
+            fontWeight: `bold`,
+            marginTop: `auto`,
+            marginBottom: `auto`,
+          }}
+        >
+          <Link href="/progress">
+            <a>Progress</a>
+          </Link>
+        </li>
+        <li
+          style={{
+            marginLeft: `2.5rem`,
+            marginTop: `auto`,
+            fontWeight: `bold`,
+            marginBottom: `auto`,
+            marginRight: `2rem`,
+          }}
+        >
+          <Link href="/related-paper">
+            <a>Related Paper</a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
-};
-
-export default Header;
+}

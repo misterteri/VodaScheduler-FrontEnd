@@ -6,11 +6,13 @@ import uploadStyles from "../styles/UploadButton.module.css";
 import img from "../asset/file_img.svg";
 import Image from "next/image";
 import Title from "./title";
+import { inherits } from "util";
 
 const Square: NextPage = () => {
   const [selectedFile, setSelectedFile] = useState<File | string>("");
   const [isFilePicked, setIsFilePicked] = useState(false);
 
+  // BUTTON HANDLER
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedFile(event.target.files![0]);
     setIsFilePicked(true);
@@ -34,17 +36,19 @@ const Square: NextPage = () => {
     <div className={styles.square}>
       <Header />
       <Title />
-      <div
+      <div // for top-bottom box
         style={{
           marginLeft: `2rem`,
           margin: `2rem`,
           width: "300px",
           padding: "5px",
+          height: `inherit`,
         }}
       >
         <label className={uploadStyles.uploadbutton}>
           <Image height={25} width={25} src={img} />
 
+          {/* for left-right box */}
           <span
             style={{
               padding: `auto`,
@@ -54,16 +58,18 @@ const Square: NextPage = () => {
           >
             Upload File
           </span>
-          {/* THE BUTTON INPUT */}
+          {/* THE UPLOAD BUTTON HANDLER  */}
           <input type="file" name="file" hidden onChange={changeHandler} />
         </label>
 
         <button
           className={uploadStyles.submitbutton}
+          // THE SUBMIT BUTTON HANDLER
           onClick={handleSubmission}
         >
           <span
             style={{
+              height: `inherit`,
               padding: `auto`,
               marginTop: `auto`,
               marginBottom: `auto`,

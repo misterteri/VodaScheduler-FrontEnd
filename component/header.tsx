@@ -13,6 +13,7 @@ export default function Header() {
 
         <li
           style={{
+            height: `inherit`,
             marginLeft: `auto`,
             fontWeight: `bold`,
             marginTop: `auto`,
@@ -26,6 +27,7 @@ export default function Header() {
 
         <li
           style={{
+            height: `inherit`,
             marginLeft: `2.5rem`,
             fontWeight: `bold`,
             marginTop: `auto`,
@@ -39,6 +41,7 @@ export default function Header() {
 
         <li
           style={{
+            height: `inherit`,
             marginLeft: `2.5rem`,
             marginTop: `auto`,
             fontWeight: `bold`,

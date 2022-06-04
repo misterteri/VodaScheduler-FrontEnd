@@ -8,7 +8,9 @@ export default function Header() {
     <nav>
       <ul className={styles.ul}>
         <li>
-          <Image src={logo} max-width="75" max-height="75" />
+          <Link href="/">
+            <Image src={logo} max-width="75" max-height="75" />
+          </Link>
         </li>
 
         <li

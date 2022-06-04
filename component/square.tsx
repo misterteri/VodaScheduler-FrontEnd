@@ -1,3 +1,4 @@
+// .tsx file for location of square
 import React, { useState } from "react";
 import type { NextPage } from "next";
 import Header from "./header";
